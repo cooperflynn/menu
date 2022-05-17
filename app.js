@@ -76,7 +76,11 @@ const menu = [
 const itemsSection = document.querySelector(".section-center");
 
 window.addEventListener("DOMContentLoaded", function () {
-  let displayMenu = menu.map(function (item) {
+  displayMenuItems(menu);
+});
+
+function displayMenuItems(menuItems) {
+  let displayMenu = menuItems.map(function (item) {
     return `
             <!-- single item -->
         <article class="menu-item">
@@ -96,4 +100,4 @@ window.addEventListener("DOMContentLoaded", function () {
   });
   displayMenu = displayMenu.join("");
   itemsSection.innerHTML = displayMenu;
-});
+}
